@@ -1,13 +1,12 @@
 package machine
 
 fun main() {
+    println("Write how many cups of coffee do you will need: ")
+    val totalCups = readLine()!!.toInt()
     println("""
-        Starting to make a coffee
-        Grinding coffee beans
-        Boiling water
-        Mixing boiled water with crushed coffee beans
-        Pouring coffee into the cup
-        Pouring some milk into the cup
-        Coffee is ready!
+        For $totalCups cups of coffee you will need:
+        ${totalCups * 200} ml of water
+        ${totalCups * 50} ml of milk
+        ${totalCups * 15} g of coffee beans
     """.trimIndent())
 }
