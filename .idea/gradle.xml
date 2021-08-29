@@ -12,6 +12,16 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Coffee Machine/task" />
+            <option value="$PROJECT_DIR$/Topics/BigDecimal/Average" />
+            <option value="$PROJECT_DIR$/Topics/BigDecimal/Deposit" />
+            <option value="$PROJECT_DIR$/Topics/BigDecimal/Gold mining" />
+            <option value="$PROJECT_DIR$/Topics/BigDecimal/Multiplication" />
+            <option value="$PROJECT_DIR$/Topics/BigDecimal/Rounding with a given precision" />
+            <option value="$PROJECT_DIR$/Topics/BigDecimal/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Default arguments/Summation" />
+            <option value="$PROJECT_DIR$/Topics/Default arguments/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Named arguments/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Named arguments/URL" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>

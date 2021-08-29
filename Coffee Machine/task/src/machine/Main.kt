@@ -1,35 +1,89 @@
 package machine
 
 fun main() {
+    val supplies = Supplies(400, 540, 120, 9, 550)
 
-    // User input
-    println("Write how many ml of water the coffee machine has: ")
-    val totalWater = readLine()!!.toInt()
+    supplies.printAmount()
+    print("Write action (buy, fill, take): ")
+    when(readLine()!!) {
+        "buy" -> buy(supplies)
+        "fill" -> fill(supplies)
+        "take" -> take(supplies)
+        else -> println("There isn't so action")
+    }
 
-    println("Write how many ml of milk the coffee machine has: ")
-    val totalMilk = readLine()!!.toInt()
+}
 
-    println("Write how many grams of coffee beans " +
-            "the coffee machine has: ")
-    val totalBeansWeight = readLine()!!.toInt()
+fun buy(supplies: Supplies) {
+    var choice: String
+    while (true) {
+        print(
+            "What do you need to buy? 1 - espresso, 2 - latte, 3 - cappuccino: "
+        )
+        choice = readLine()!!
+        if (choice == "1" || choice == "2" || choice == "3") {
+            break
+        } else println("There isn't so option, try again!")
+    }
 
-    println("Write how many cups of coffee do you will need: ")
-    val requiredCups = readLine()!!.toInt()
+    supplies.cups -= 1
+    when(choice) {
+        "1" -> {
+            supplies.water -= 250
+            supplies.beans -= 16
+            supplies.money += 4
+        }
+        "2" -> {
+            supplies.water -= 350
+            supplies.milk -= 75
+            supplies.beans -= 20
+            supplies.money += 7
+        }
+        else -> {
+            supplies.water -= 200
+            supplies.milk -= 100
+            supplies.beans -= 12
+            supplies.money += 6
+        }
+    }
 
-    // Calculation of amounts of cups
-    val availableCups = listOf(
-        totalWater / 200,
-        totalMilk / 50,
-        totalBeansWeight / 15
-    ).minOrNull()!!
+    supplies.printAmount()
 
-    // Output result
-    println(
-        if (availableCups == requiredCups) {
-            "Yes, I can make that amount of coffee"
-        } else if (availableCups > requiredCups) {
-            "Yes, I can make than amount of coffee (and even " +
-                    "${availableCups - requiredCups} more than that)"
-        } else "No, I can make only $availableCups cups of coffee"
-    )
+}
+
+fun fill(supplies: Supplies) {
+
+    print("Write how many ml of water do you want to add: ")
+    supplies.water += readLine()!!.toInt()
+    print("Write how many ml of milk do you want to add: ")
+    supplies.milk += readLine()!!.toInt()
+    print("Write how many grams of coffee beans do you want to add: ")
+    supplies.beans += readLine()!!.toInt()
+    print("Write how many disposable cups of coffee do you want to add: ")
+    supplies.cups += readLine()!!.toInt()
+
+    supplies.printAmount()
+}
+
+fun take(supplies: Supplies) {
+
+    println("I gave you $${supplies.money}\n")
+    supplies.money = 0
+    supplies.printAmount()
+
+}
+
+class Supplies (var water: Int, var milk: Int, var beans: Int,
+                var cups: Int, var money: Int) {
+    fun printAmount() {
+        println("""
+            The coffee machine has:
+            $water of water
+            $milk of milk
+            $beans of coffee beans
+            $cups of disposable cups
+            $money of money
+            
+        """.trimIndent())
+    }
 }
