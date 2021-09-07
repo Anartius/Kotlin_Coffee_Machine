@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -18,8 +19,19 @@
             <option value="$PROJECT_DIR$/Topics/BigDecimal/Multiplication" />
             <option value="$PROJECT_DIR$/Topics/BigDecimal/Rounding with a given precision" />
             <option value="$PROJECT_DIR$/Topics/BigDecimal/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Companion object/Board game basics  Player" />
+            <option value="$PROJECT_DIR$/Topics/Companion object/Companion" />
+            <option value="$PROJECT_DIR$/Topics/Companion object/Fix an error" />
+            <option value="$PROJECT_DIR$/Topics/Companion object/Fix me" />
+            <option value="$PROJECT_DIR$/Topics/Companion object/Theory" />
             <option value="$PROJECT_DIR$/Topics/Default arguments/Summation" />
             <option value="$PROJECT_DIR$/Topics/Default arguments/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Enum/Currencies" />
+            <option value="$PROJECT_DIR$/Topics/Enum/Currency comparison" />
+            <option value="$PROJECT_DIR$/Topics/Enum/Danger level" />
+            <option value="$PROJECT_DIR$/Topics/Enum/Rainbow colors" />
+            <option value="$PROJECT_DIR$/Topics/Enum/The rainbow order" />
+            <option value="$PROJECT_DIR$/Topics/Enum/Theory" />
             <option value="$PROJECT_DIR$/Topics/Named arguments/Theory" />
             <option value="$PROJECT_DIR$/Topics/Named arguments/URL" />
             <option value="$PROJECT_DIR$/util" />

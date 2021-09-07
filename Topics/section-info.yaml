@@ -2,3 +2,5 @@ content:
 - BigDecimal
 - Named arguments
 - Default arguments
+- Companion object
+- Enum
